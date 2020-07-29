@@ -26,8 +26,8 @@ Route::group(['namespace'=>'Api'], function() {
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
     
-    //resource:     index, create, store, show, edit, update, destroy
-    //apiResource:  index, store, show, update, destroy
+    //      resource:   index, create, store, show, edit, update, destroy
+    //   apiResource:   index, store, show, update, destroy
     Route::apiResource('/users', 'UserController')->only(['index', 'store', 'destroy']);
     Route::apiResource('/contacts', 'ContactController')->only(['index', 'store']);
 
